@@ -39,18 +39,45 @@ body{
   height: 65px;
   width: 100%;
   border: 1px solid black;
+  display:flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  background-color: #EAEAEA;
 }
+
+.items-sidebar-logo{
+  height: 65px;
+  border: 1px solid black;
+  }
+  .items-sidebar-icon{
+  height: 65px;
+  border: 1px solid black;
+  }
+  .items-sidebar-icon>i{
+    padding: 0 10px;
+    vertical-align: middle;
+    line-height: 65px;
+    color:#B1B1B1;
+
+
+
+  }
+/* fine della porzione sidebar  */
 /* tutt la posizione centrale divisa in tre parti superiore centrale inferiore */
 .main{
   height: 100%;
   width: 70%;
+  background-image:url("img/mine.jpg");
+  overflow-y: scroll;
 
   position: relative;
+
 }
 .box-superior{
   width: 100%;
   height: 65px;
   border: 1px solid black;
+  background-color: #EAEAEA;
 }
 .box-center{
   width: 100%;
@@ -60,4 +87,5 @@ body{
   width: 100%;
   height: 65px;
   border: 1px solid black;
+  background-color: #F3EEEA;
 }

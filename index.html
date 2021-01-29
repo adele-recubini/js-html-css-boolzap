@@ -11,16 +11,33 @@
   </head>
   <body>
 
-    <div id="rott" class="container">
+    <div id="root" class="container">
       <!-- contenitore a destra  -->
 
       <div class="sidebar float-left">
 
         <div class="sidebar-superior">
+
+            <div class="items-sidebar-logo">
+            <span>logo-avatar</span>
+            </div>
+            <div class="items-sidebar-icon">
+              <i class="fas fa-circle-notch  fa-2x"></i>
+              <i class="fas fa-comment-alt fa-2x"></i>
+              <i class="fas fa-ellipsis-v fa-2x"></i>
+
+            </div>
+
+
+
         </div>
 
         <div class="contatti" v-for ="element in contacts">
           <span>{{element.name}}</span>
+          <!-- <img :src="'img/avatar' + element.avatar + '.jpg'" alt=""> -->
+
+
+
         </div>
 
       </div>
@@ -34,7 +51,7 @@
        <div class="box-down">
        </div>
      </div>
-<img src="" alt="">
+
 
 
 
