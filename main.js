@@ -89,5 +89,4 @@ contacts: [
 	},
  ]
  },
-methods: {}
 });
