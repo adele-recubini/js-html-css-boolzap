@@ -10,6 +10,11 @@ body{
   height: 100vh;
   display:flex;
 }
+img{
+  height: 60px;
+  border-radius: 50px;
+
+}
 
 /* utility class per il float left e right */
 .float-right{
@@ -35,15 +40,33 @@ body{
   height: 100%;
   width: 30%;
 }
+.sidebar-blue{
+  width:100%;
+  height: 60px;
+  border: 1px solid black;
+  background-color: #8EDAFC;
+}
+.notifiche-logo, .notifiche-link{
+  display: inline-block;
+  padding: 15px;
+}
+.notifiche-logo>i{
+ border-radius: 50px;
+
+ /* padding-right: 20px; */
+}
+
+
 .sidebar-superior{
   height: 65px;
   width: 100%;
   border: 1px solid black;
   display:flex;
   flex-direction: row;
-  justify-content:flex-end;
+  justify-content:space-around;
   background-color: #EAEAEA;
 }
+
 
 .items-sidebar-logo{
   height: 65px;
@@ -58,18 +81,34 @@ body{
     vertical-align: middle;
     line-height: 65px;
     color:#B1B1B1;
-
-
-
   }
+  .scroll{
+    height: calc(100% - 65px - 65px - 65px);
+    overflow-y: scroll;
+  }
+  .input-search{
+    width: 100%;
+    height: 65px;
+    padding: 20px;
+  }
+  input{
+    width: 200px;
+    margin-left: 15px;
+    border: none;
+    height: 20px;
+  }
+
+  .contact{
+    border:1px solid lightgrey;
+  }
+
 /* fine della porzione sidebar  */
 /* tutt la posizione centrale divisa in tre parti superiore centrale inferiore */
 .main{
   height: 100%;
   width: 70%;
   background-image:url("img/mine.jpg");
-  overflow-y: scroll;
-
+  /* overflow-y: scroll; */
   position: relative;
 
 }
@@ -82,10 +121,27 @@ body{
 .box-center{
   width: 100%;
   height:calc(100% - 130px);
+  overflow-y: scroll;
 }
 .box-down{
   width: 100%;
   height: 65px;
   border: 1px solid black;
   background-color: #F3EEEA;
+}
+.footer-flex{
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+
+}
+.items-footer{
+  height: 60px;
+  margin-top: 20px;
+}
+.write-msg{
+  width: 80%;
+  height: 50px;
+   padding: 5 15px;  
 }

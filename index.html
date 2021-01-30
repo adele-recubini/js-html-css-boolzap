@@ -17,7 +17,6 @@
       <div class="sidebar float-left">
 
         <div class="sidebar-superior">
-
             <div class="items-sidebar-logo">
             <span>logo-avatar</span>
             </div>
@@ -25,30 +24,62 @@
               <i class="fas fa-circle-notch  fa-2x"></i>
               <i class="fas fa-comment-alt fa-2x"></i>
               <i class="fas fa-ellipsis-v fa-2x"></i>
-
             </div>
+        </div>
+
+        <div class="sidebar-blue">
+          <div class="notifiche-logo">
+            <i class="fas fa-bell-slash fa-2x"></i>
+          </div>
+          <div class="notifiche-link">
+            <span>ricevi notifiche di nuovi msg</span><br>
+            <a href="#">Attiva notifiche desktop</a>
+          </div>
 
 
 
         </div>
 
+        <div class="input-search">
+          <span><i class="fas fa-search"></i></span>
+          <span><input class="input-contact" type="text" placeholder="cerca o inizia una nuova chat" name="" value=""></span>
+        </div>
+
+<!-- porzione che utilizza lo script -->
+        <div class="scroll">
         <div class="contatti" v-for ="element in contacts">
-          <span>{{element.name}}</span>
-          <!-- <img :src="'img/avatar' + element.avatar + '.jpg'" alt=""> -->
-
-
-
+        <div class="contact">
+         <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
+        <span>{{element.name}}</span></div>
         </div>
-
+<!-- fine porzione che utilizza lo script  -->
+      </div>
       </div>
       <!-- fine contenitore a destra -->
 
      <div class="main float-left">
        <div class="box-superior">
        </div>
+
        <div class="box-center">
        </div>
+
        <div class="box-down">
+         <div class="footer-flex">
+            <div class="items-footer">
+              <i class="far fa-smile fa-2x"></i>
+            </div>
+
+
+              <input class="write-msg"  placeholder="scrivi un messaggio"name="" value="">
+
+          
+
+             <div class="items-footer">
+               <i class="fas fa-microphone fa-2x"></i>
+             </div>
+          </div>
+
        </div>
      </div>
 
