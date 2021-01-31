@@ -123,12 +123,13 @@ img{
 .items-box{
   height: 65px;
   line-height: 65px;
-
+  width: 50%;
 }
 .items-box>i{
   padding: 0 10px;
-  color:#B1B1B4
-
+  color:#B1B1B4;
+  float: right;
+  line-height: 65px;
 }
 
 
