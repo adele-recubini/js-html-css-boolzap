@@ -45,6 +45,9 @@ img{
   height: 60px;
   border: 1px solid black;
   background-color: #8EDAFC;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }
 .notifiche-logo, .notifiche-link{
   display: inline-block;
@@ -134,6 +137,27 @@ img{
   height:calc(100% - 130px);
   overflow-y: scroll;
 }
+.sent-msg{
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  float: right;
+  background-color: green;
+  border-radius: 5px;
+  clear: both;
+  margin: 15px 15px;
+}
+.received-msg{
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  float: left;
+  background-color: white;
+  border-radius: 5px;
+  clear: both;
+  margin: 15px 15px;
+}
+
 .box-down{
   width: 100%;
   height: 65px;
