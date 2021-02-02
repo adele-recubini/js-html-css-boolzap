@@ -4,6 +4,8 @@ var app = new Vue({
     data: {
     contattoCliccato: 0,
     utenteMsg:'',
+    rispostaPc:'ok',
+
 
 contacts: [
 	{
@@ -92,17 +94,26 @@ contacts: [
  ]
  },
  methods:{
-   cambiaContatto:function(index) {
-            this.contattoCliccato = index;
-            console.log(this.contattoCliccato);
-        },
+
+  cambiaContatto:function(index) {
+    this.contattoCliccato = index;
+    console.log(this.contattoCliccato);
+  },
 
   addMsg:function(){
     this.contacts[this.contattoCliccato].messages.push({date:'10/01/2020 15:30:55', text:this.utenteMsg, status:'sent'});
     // dopo ogni volta che scrivo qualcosa resetto
-    this.utenteMsg=''
+    this.utenteMsg='';
 
-  },
+  // dopo un secondo qualcuno risponde(il pc ) sempre nella stessa funzione
+  setTimeout(function(){
 
-},
+    this.contacts[this.contattoCliccato].messages.push({date:'10/01/2020 15:30:55', text:this.rispostaPc, status:'received'});
+
+  },1000)
+
+
+ },
+
+}
 });
