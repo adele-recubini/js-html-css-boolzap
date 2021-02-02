@@ -22,9 +22,9 @@
             <span>Ado</span>
             </div>
             <div class="items-sidebar">
-              <i class="fas fa-circle-notch  fa-2x"></i>
-              <i class="fas fa-comment-alt fa-2x"></i>
-              <i class="fas fa-ellipsis-v fa-2x"></i>
+              <i class="fas fa-circle-notch"></i>
+              <i class="fas fa-comment-alt"></i>
+              <i class="fas fa-ellipsis-v"></i>
             </div>
         </div>
 
@@ -48,10 +48,14 @@
 
 <!-- porzione che utilizza lo script -->
         <div class="scroll">
-        <div class="contatti" v-for ="element in contacts">
-        <div class="contact">
+        <div class="contatti" v-for ="(element,index) in contacts">
+        <div class="contact" @click="cambiaContatto(index)">
+
          <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
         <span>{{element.name}}</span></div>
+
+
+
         </div>
 <!-- fine porzione che utilizza lo script  -->
       </div>
@@ -63,15 +67,15 @@
          <div class="sidebar-superior">
 
            <div class="items-box">
-            <img src="img/avatar_1.jpg" alt="">
-            
+            <img :src="'img/avatar' + contacts[contattoCliccato].avatar + '.jpg'" alt="">
+
 
            </div>
 
              <div class="items-box">
-               <i class="fas fa-search fa-2x"></i>
-               <i class="fas fa-paperclip fa-2x"></i>
-               <i class="fas fa-ellipsis-v fa-2x"></i>
+               <i class="fas fa-search"></i>
+               <i class="fas fa-paperclip"></i>
+               <i class="fas fa-ellipsis-v"></i>
              </div>
          </div>
 
@@ -79,12 +83,13 @@
        </div>
 
        <div class="box-center">
-         <div class="sent-msg">
-           <span>ciao come stai ?</span>
-        </div>
-        <div class="received-msg">
-          <span>benone!</span>
-        </div>
+         <div v-for="element in contacts[contattoCliccato].messages"
+         :class="{
+           received: (element.status === 'received'),
+           sent: (element.status === 'sent'),
+         }">
+           {{element.text}}
+         </div>
        </div>
 
        <div class="box-down">

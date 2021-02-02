@@ -138,20 +138,21 @@ img{
   height:calc(100% - 130px);
   overflow-y: scroll;
 }
-.sent-msg{
-  width: 100px;
+/* le classi devono chiamarsi uguali al valore nell oggetto status senno non funziona  */
+.sent{
+  width: 150px;
   height: 50px;
-  border: 1px solid black;
+
   float: right;
   background-color: green;
   border-radius: 5px;
   clear: both;
   margin: 15px 15px;
 }
-.received-msg{
-  width: 100px;
+.received{
+  width: 150px;
   height: 50px;
-  border: 1px solid black;
+
   float: left;
   background-color: white;
   border-radius: 5px;

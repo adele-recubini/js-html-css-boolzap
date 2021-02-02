@@ -2,6 +2,7 @@
 var app = new Vue({
     el: '#root',
     data: {
+    contattoCliccato: 0,
 
 contacts: [
 	{
@@ -88,6 +89,12 @@ contacts: [
 		],
 	},
  ]
+ },
+ methods:{
+   cambiaContatto:function(index) {
+            this.contattoCliccato = index;
+            console.log(this.contattoCliccato);
+        }
  },
 
 });
