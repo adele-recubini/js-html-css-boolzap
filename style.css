@@ -118,7 +118,11 @@ img{
   display:flex;
   flex-direction: row;
   justify-content:space-between;
-
+}
+.nomi-utenti{
+  border: 1px solid black;
+  margin-bottom: 25px;
+  height:65px;
 }
 .items-box{
   height: 65px;
