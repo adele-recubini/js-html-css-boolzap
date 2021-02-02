@@ -106,8 +106,8 @@ contacts: [
     this.utenteMsg='';
 
   // dopo un secondo qualcuno risponde(il pc ) sempre nella stessa funzione
-  setTimeout(function(){
-
+  // NOTA IMPORTANTE se non avessi l arrow fun non avrebbe funziona perche non leggeva l oggetto a casua degli scope . se avessi gestito con i let gli oggetti quindi inserire tutte le informazioni nei let avrei potuto gestire il set timeout senza l arrow fun
+    setTimeout(()=>{
     this.contacts[this.contattoCliccato].messages.push({date:'10/01/2020 15:30:55', text:this.rispostaPc, status:'received'});
 
   },1000)
