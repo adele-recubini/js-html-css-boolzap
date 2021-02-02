@@ -3,6 +3,7 @@ var app = new Vue({
     el: '#root',
     data: {
     contattoCliccato: 0,
+    utenteMsg:'',
 
 contacts: [
 	{
@@ -96,5 +97,9 @@ contacts: [
             console.log(this.contattoCliccato);
         }
  },
+  addMsg:function(){
+    'sent'.push(this.utenteMsg);
+  },
+
 
 });
