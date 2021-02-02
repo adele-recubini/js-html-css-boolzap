@@ -95,11 +95,14 @@ contacts: [
    cambiaContatto:function(index) {
             this.contattoCliccato = index;
             console.log(this.contattoCliccato);
-        }
- },
+        },
+
   addMsg:function(){
-    'sent'.push(this.utenteMsg);
+    this.contacts[this.contattoCliccato].messages.push({date:'10/01/2020 15:30:55', text:this.utenteMsg, status:'sent'});
+    // dopo ogni volta che scrivo qualcosa resetto
+    this.utenteMsg=''
+
   },
 
-
+},
 });
