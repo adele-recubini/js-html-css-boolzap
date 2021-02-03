@@ -43,16 +43,17 @@
 
         <div class="input-search">
           <span><i class="fas fa-search"></i></span>
-          <span><input class="input-contact" type="text" placeholder="cerca o inizia una nuova chat" name="" value=""></span>
+          <span><input class="input-contact" type="text" placeholder="cerca o inizia una nuova chat" v-model="cerca" @keyup="inputSearch"></span>
         </div>
 
 <!-- porzione che utilizza lo script -->
         <div class="scroll">
-        <div class="contatti" v-for ="(element,index) in contacts">
+        <div class="contatti" v-for ="(element,index) in contacts" v-if="element.visible">
         <div class="contact" @click="cambiaContatto(index)">
 
          <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
         <span>{{element.name}}</span></div>
+
 
 
 

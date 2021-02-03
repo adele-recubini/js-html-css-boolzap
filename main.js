@@ -5,6 +5,7 @@ var app = new Vue({
     contattoCliccato: 0,
     utenteMsg:'',
     rispostaPc:'ok',
+    cerca:'',
 
 
 contacts: [
@@ -90,6 +91,7 @@ contacts: [
 				status: 'received'
 			}
 		],
+
 	},
  ]
  },
@@ -114,6 +116,25 @@ contacts: [
 
 
  },
+
+ // quando clicco sull imput cerca utente deve mostrarmi sono l utentecercato, e dove li cerca ? ovviamente nei contact.name e come li vede tutti ? li ciclo con un foreach
+
+ inputSearch:function(){
+  this.contacts.forEach((element) => {
+    // assegno delle varibaili senno è troppo lungo il codice
+    let utente = element.name.toLowerCase();
+    let utenteCercato = this.cerca.toLowerCase();
+    // se l utente che cerco nel l imput inizia con una lettera dell utente che ho in contacts me lo renderà visibile
+    if (utenteCercato.startsWith(utente)) {
+       element.visible = true;
+       // altrimenti no
+    }else {
+      element.visible = false;
+    }
+  });
+
+
+ }
 
 }
 });
