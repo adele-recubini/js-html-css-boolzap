@@ -14,7 +14,9 @@ body{
 img{
   height: 60px;
   border-radius: 50px;
-
+}
+i{
+  cursor: pointer;
 }
 
 /* utility class per il float left e right */
