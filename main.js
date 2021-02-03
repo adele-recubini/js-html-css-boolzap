@@ -96,12 +96,20 @@ contacts: [
  ]
  },
  methods:{
+ // funzione che mi gestisce l ultimo accesso del contatto
+ ultimoAccesso: function(index){
+   const messages = this.contacts[index].messages
+   const lastIndex = messages.length -1
+   const lastDate = messages[lastIndex].date
+   return lastDate;
+ },
 
+ // 1funzione che mi aggiorna il contatto cliccato
   cambiaContatto:function(index) {
     this.contattoCliccato = index;
     console.log(this.contattoCliccato);
   },
-
+  // 2funzione che pusha all interno dell array un nuovo oggetto in questo caso una mia frase
   addMsg:function(){
     this.contacts[this.contattoCliccato].messages.push({date:'10/01/2020 15:30:55', text:this.utenteMsg, status:'sent'});
     // dopo ogni volta che scrivo qualcosa resetto
@@ -117,7 +125,7 @@ contacts: [
 
  },
 
- // quando clicco sull imput cerca utente deve mostrarmi sono l utentecercato, e dove li cerca ? ovviamente nei contact.name e come li vede tutti ? li ciclo con un foreach
+ // 3funzione quando clicco sull imput cerca utente deve mostrarmi sono l utentecercato, e dove li cerca ? ovviamente nei contact.name e come li vede tutti ? li ciclo con un foreach
 
  inputSearch:function(){
   this.contacts.forEach((element) => {
@@ -125,7 +133,7 @@ contacts: [
     let utente = element.name.toLowerCase();
     let utenteCercato = this.cerca.toLowerCase();
     // se l utente che cerco nel l imput inizia con una lettera dell utente che ho in contacts me lo renderà visibile
-    if (utenteCercato.startsWith(utente)) {
+    if (utente.startsWith(utenteCercato)) {
        element.visible = true;
        // altrimenti no
     }else {
