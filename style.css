@@ -172,7 +172,7 @@ i{
   height: 52px;
 
   float: right;
-  background-color: green;
+  background-color: lightgreen;
   border-radius: 5px;
   clear: both;
   margin: 15px 15px;
@@ -188,9 +188,8 @@ i{
   clear: both;
   margin: 15px 15px;
   text-align: center;
-  
-
 }
+
 
 .box-down{
   width: 100%;
