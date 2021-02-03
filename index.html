@@ -11,6 +11,7 @@
   </head>
   <body>
 
+
     <div id="root" class="container">
       <!-- contenitore a destra  -->
 
@@ -64,8 +65,9 @@
 
            <div class="items-box">
             <img :src="'img/avatar' + contacts[contattoCliccato].avatar + '.jpg'" alt="">
-            <span>{{contacts[contattoCliccato].name}}</span>
-            <span clas ="ultimo-accesso"> utlimo accesso {{ ultimoAccesso(contattoCliccato) }}</span>
+            <div class="nome">{{contacts[contattoCliccato].name}}</div>
+
+             <div class="last-access">Access{{ ultimoAccesso(contattoCliccato) }}</div>
            </div>
 
              <div class="items-box">

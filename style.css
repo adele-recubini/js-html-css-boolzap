@@ -9,8 +9,9 @@ body{
   width: 100%;
   height: 100vh;
   display:flex;
-  background-color: #dddbd1
+  background-image: linear-gradient(#009788,#DADBD5);
 }
+
 img{
   height: 60px;
   border-radius: 50px;
@@ -86,6 +87,7 @@ i{
   }
 
 
+
   .items-sidebar>i{
     padding: 0 10px;
     vertical-align: middle;
@@ -133,8 +135,17 @@ i{
   flex-direction: row;
   justify-content:space-between;
 }
-.items-box>span{
+/* .items-box>small{
   vertical-align:top;
+} */
+.nome, .last-access{
+  display: inline-block;
+  vertical-align: top;
+}
+.last-access{
+  vertical-align: bottom;
+  margin-left: -54px;
+
 }
 
 .items-box{
@@ -158,13 +169,14 @@ i{
 /* le classi devono chiamarsi uguali al valore nell oggetto status senno non funziona  */
 .sent{
   width: 150px;
-  height: 50px;
+  height: 52px;
 
   float: right;
   background-color: green;
   border-radius: 5px;
   clear: both;
   margin: 15px 15px;
+  text-align: center;
 }
 .received{
   width: 150px;
@@ -175,6 +187,9 @@ i{
   border-radius: 5px;
   clear: both;
   margin: 15px 15px;
+  text-align: center;
+  
+
 }
 
 .box-down{
