@@ -103,6 +103,13 @@ contacts: [
    const lastDate = messages[lastIndex].date
    return lastDate;
  },
+ ultimoAccessoNoncliccato: function(index){
+   const messages = this.contacts[index].messages
+   const lastIndex = messages.length -1
+   const lastDate = messages[lastIndex].date
+   return lastDate;
+ },
+
 
  // 1funzione che mi aggiorna il contatto cliccato
   cambiaContatto:function(index) {

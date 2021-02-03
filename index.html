@@ -48,12 +48,17 @@
         </div>
 
         <div class="scroll">
-        <div class="contatti" v-for ="(element,index) in contacts" v-if="element.visible">
-        <div class="contact" @click="cambiaContatto(index)">
+        <div class="contatti"
+          v-for ="(element,index) in contacts"
+          v-if="element.visible">
+          <div class="contact" @click="cambiaContatto(index)">
+          <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
+          <span>{{element.name}}</span>
+          <span>{{ultimoAccessoNoncliccato(index)}}</span>
 
-         <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
-        <span>{{element.name}}</span></div>
-         <div class="last-access">{{contacts[contattoCliccato].date}}</div>
+
+
+         </div>
         </div>
 
       </div>
@@ -89,6 +94,7 @@
            sent: (element.status === 'sent'),
          }">
            {{element.text}}
+
          </div>
        </div>
 
