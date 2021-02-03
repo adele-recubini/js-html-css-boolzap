@@ -56,6 +56,9 @@ img{
 }
 .notifiche-logo>i{
  border-radius: 50px;
+ border: 1px solid white;
+ background-color: white;
+ color: #8EDAFC;
 
  /* padding-right: 20px; */
 }
