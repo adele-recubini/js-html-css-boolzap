@@ -44,7 +44,7 @@
 
         <div class="input-search">
           <span><i class="fas fa-search"></i></span>
-          <span><input class="input-contact" type="text" placeholder="cerca o inizia una nuova chat" v-model="cerca" @keyup="inputSearch"></span>
+          <span><input class="input-contact" type="text" placeholder=" cerca o inizia una nuova chat" v-model="cerca" @keyup="inputSearch"></span>
         </div>
 
         <div class="scroll">
@@ -89,11 +89,18 @@
 
        <div class="box-center">
          <div v-for="element in contacts[contattoCliccato].messages"
+
          :class="{
            received: (element.status === 'received'),
            sent: (element.status === 'sent'),
-         }">
-           {{element.text}}
+         }"
+         >
+         <!-- stampo il testo  -->
+           <span>{{element.text}}</span>
+           <!-- stampo la data di invio  -->
+
+
+
 
          </div>
        </div>
